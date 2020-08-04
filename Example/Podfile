@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TKCocoaWidgetModule_Example' do
+  pod 'TKCocoaWidgetModule', :path => '../'
+
+  target 'TKCocoaWidgetModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

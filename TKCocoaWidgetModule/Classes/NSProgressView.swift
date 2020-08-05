@@ -8,12 +8,12 @@
 import Cocoa
 import TKCocoaModule
 
-class NSProgressView: NSView {
-    var style: Style = .default
+public class NSProgressView: NSView {
+    public var style: Style = .default
     
     private(set) var progress: Float = 0
     
-    var progressTinColor: NSColor? {
+    public var progressTinColor: NSColor? {
         didSet {
             progressView.backgroundColor = progressTinColor
         }
@@ -38,7 +38,7 @@ class NSProgressView: NSView {
     }
     
     
-    override func draw(_ dirtyRect: NSRect) {
+    public override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         if progressView.height !=  self.height {
             progressView.frame = NSRect.init(x: 0, y: 0, width: 0, height: self.height)
@@ -50,13 +50,13 @@ class NSProgressView: NSView {
 }
 
 extension NSProgressView {
-    enum Style {
+    public enum Style {
         case `default`
     }
 }
 
 extension NSProgressView {
-    func setProgress(_ progress: Float, animated: Bool) {
+    public func setProgress(_ progress: Float, animated: Bool) {
         self.progress = progress
         let  duration = animated ? 0.2 : 0
         NSAnimationContext.runAnimationGroup { (context) in

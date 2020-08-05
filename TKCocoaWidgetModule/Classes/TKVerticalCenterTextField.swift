@@ -14,7 +14,7 @@ public class TKVerticalCenterTextField: NSTextField {
             super.draw(dirtyRect)
         }
          
-    override init(frame frameRect: NSRect) {
+    public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
          
         let cell = RSVerticallyCenteredTextFieldCell(textCell: "")

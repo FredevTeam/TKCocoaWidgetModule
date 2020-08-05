@@ -9,7 +9,7 @@ import Cocoa
 
 
 public class NSLabel: NSTextField {
-    override init(frame frameRect: NSRect) {
+    public override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         self.placeholderString = ""
         self.font = NSFont.systemFont(ofSize: 28)

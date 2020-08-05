@@ -21,18 +21,19 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/playtomandjerry@gmail.com/TKCocoaWidgetModule'
+  s.homepage         = 'https://github.com/zhuamaodeyu/TKCocoaWidgetModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'playtomandjerry@gmail.com' => 'playtomandjerry@gmail.com' }
-  s.source           = { :git => 'https://github.com/playtomandjerry@gmail.com/TKCocoaWidgetModule.git', :tag => s.version.to_s }
+  s.author           = { 'zhuamaodeyu' => 'playtomandjerry@gmail.com' }
+  s.source           = { :git => 'https://github.com/zhuamaodeyu/TKCocoaWidgetModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :osx
-  s.osx.deployment_target = "10.10"
+  s.osx.deployment_target = "10.12"
 
   s.source_files = 'TKCocoaWidgetModule/Classes/**/*'
 
+  s.dependency 'TKCocoaModule'
   # s.resource_bundles = {
   #   'TKCocoaWidgetModule' => ['TKCocoaWidgetModule/Assets/*.png']
   # }

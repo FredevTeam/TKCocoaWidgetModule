@@ -1,6 +1,6 @@
 PODS:
   - TKCocoaModule (0.1.3)
-  - TKCocoaWidgetModule (0.1.1):
+  - TKCocoaWidgetModule (0.1.2):
     - TKCocoaModule
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   TKCocoaModule: 7ffb32b8c0efffd0ed4d6290c215af69578918c6
-  TKCocoaWidgetModule: 424f3ae501e7277dad2cdebd22783bf58bf9721a
+  TKCocoaWidgetModule: e33a88aa806bfc904df5c046dfe1120c33fc8a41
 
 PODFILE CHECKSUM: aa95a4db622e32c596957befaa5dc78f68917bcd
 

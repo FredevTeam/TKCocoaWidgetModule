@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TKCocoaWidgetModule'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of TKCocoaWidgetModule.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/FredevTeam/TKFoundationModule'
+  s.homepage         = 'https://github.com/FredevTeam/TKCocoaWidgetModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhuamaodeyu' => 'playtomandjerry@gmail.com' }
-  s.source           = { :git => 'https://github.com/FredevTeam/TKFoundationModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/FredevTeam/TKCocoaWidgetModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform = :osx

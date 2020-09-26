@@ -205,7 +205,7 @@ open class TKCustomButton: NSButton {
         layer?.borderColor = isOn ? self.activeBorderColor.cgColor : self.borderColor.cgColor
         layer?.shadowColor = isOn ? (self.activeShadowColor?.cgColor ?? self.shadowColor.cgColor) : self.shadowColor.cgColor
 
-        titleLayer.alignmentMode = kCAAlignmentCenter
+        titleLayer.alignmentMode = CATextLayerAlignmentMode.center
         titleLayer.contentsScale = window?.backingScaleFactor ?? 2
         titleLayer.foregroundColor = isOn ? self.activeTextColor.cgColor : self.textColor.cgColor
         layer?.addSublayer(titleLayer)
@@ -305,7 +305,7 @@ open class TKCustomButton: NSButton {
 }
 
 extension TKCustomButton: NSViewLayerContentScaleDelegate {
-    public override func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool { true }
+    public func layer(_ layer: CALayer, shouldInheritContentsScale newScale: CGFloat, from window: NSWindow) -> Bool { true }
 }
 
 
@@ -374,7 +374,7 @@ extension LayerColorAnimation where Self: CALayer {
         animation.fromValue = self[keyPath: keyPath]
         animation.toValue = color
         animation.duration = duration
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
 
         add(animation, forKeyPath: keyPath) { [weak self] _ in

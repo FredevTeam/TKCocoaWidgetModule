@@ -45,24 +45,6 @@ open class TKCustomButton: NSButton {
         }
     }
 
-    @IBInspectable public var cornerRadius: Double = 0 {
-        didSet {
-            layer?.cornerRadius = CGFloat(cornerRadius)
-        }
-    }
-
-    @IBInspectable public var borderWidth: Double = 0 {
-        didSet {
-            layer?.borderWidth = CGFloat(borderWidth)
-        }
-    }
-
-    @IBInspectable public var borderColor: NSColor = .clear {
-        didSet {
-            layer?.borderColor = borderColor.cgColor
-        }
-    }
-
     @IBInspectable public var activeBorderColor: NSColor = .clear {
         didSet {
             if state == .on {
@@ -85,23 +67,11 @@ open class TKCustomButton: NSButton {
         }
     }
 
-    @IBInspectable public var shadowRadius: Double = 0 {
-        didSet {
-            layer?.shadowRadius = CGFloat(shadowRadius)
-        }
-    }
-
     @IBInspectable public var activeShadowRadius: Double = -1 {
         didSet {
             if state == .on {
                 layer?.shadowRadius = CGFloat(activeShadowRadius)
             }
-        }
-    }
-
-    @IBInspectable public var shadowOpacity: Double = 0 {
-        didSet {
-            layer?.shadowOpacity = Float(shadowOpacity)
         }
     }
 
@@ -113,12 +83,7 @@ open class TKCustomButton: NSButton {
         }
     }
 
-    @IBInspectable public var shadowColor: NSColor = .clear {
-        didSet {
-            layer?.shadowColor = shadowColor.cgColor
-        }
-    }
-
+   
     @IBInspectable public var activeShadowColor: NSColor? {
         didSet {
             if state == .on, let activeShadowColor = activeShadowColor {
@@ -200,10 +165,10 @@ open class TKCustomButton: NSButton {
         layer?.cornerRadius = CGFloat(cornerRadius)
         layer?.borderWidth = CGFloat(borderWidth)
         layer?.shadowRadius = CGFloat(isOn && activeShadowRadius != -1 ? activeShadowRadius : shadowRadius)
-        layer?.shadowOpacity = Float(isOn && activeShadowOpacity != -1 ? activeShadowOpacity : shadowOpacity)
+        layer?.shadowOpacity = Float(isOn && activeShadowOpacity != -1 ? Float(activeShadowOpacity) : shadowOpacity)
         layer?.backgroundColor = isOn ? self.activeBackgroundColor.cgColor : self.t_backgroundColor.cgColor
-        layer?.borderColor = isOn ? self.activeBorderColor.cgColor : self.borderColor.cgColor
-        layer?.shadowColor = isOn ? (self.activeShadowColor?.cgColor ?? self.shadowColor.cgColor) : self.shadowColor.cgColor
+        layer?.borderColor = isOn ? self.activeBorderColor.cgColor : self.borderColor?.cgColor
+        layer?.shadowColor = isOn ? (self.activeShadowColor?.cgColor ?? self.shadowColor?.cgColor) : self.shadowColor?.cgColor
 
         titleLayer.alignmentMode = CATextLayerAlignmentMode.center
         titleLayer.contentsScale = window?.backingScaleFactor ?? 2

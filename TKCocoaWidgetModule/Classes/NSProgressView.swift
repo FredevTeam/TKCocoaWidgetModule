@@ -15,7 +15,7 @@ public class NSProgressView: NSView {
     
     public var progressTinColor: NSColor? {
         didSet {
-            progressView.backgroundColor = progressTinColor
+            progressView.layer?.backgroundColor = progressTinColor?.cgColor
         }
     }
     
@@ -24,6 +24,7 @@ public class NSProgressView: NSView {
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
+        self.wantsLayer = true
         self.addSubview(progressView)
         
     }

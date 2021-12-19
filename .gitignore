@@ -35,3 +35,6 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+Example/TKCocoaWidgetModule.xcodeproj/project.xcworkspace
+contents.xcworkspacedata
+IDEWorkspaceChecks.plist
